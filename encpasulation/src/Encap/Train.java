@@ -13,10 +13,12 @@ public class Train {
 		this.station = station;
 		Arrival = arrival;
 		Departure = departure;
+		
 	}
 	public void printStatement() {
 		
-		System.out.printf("%d %1s %17s %8s %11s\n", trainno,traincode,station,Arrival,Departure);
+		System.out.printf("%d %1s %15s %8s %11s\n", trainno,traincode,station,Arrival,Departure);
+		
 
 	}
 
@@ -27,13 +29,16 @@ public class Train {
 		System.out.println("# code    station           Arr.       Dep.");
 		System.out.println("-----------------------------------------------");
 		Train[] transactions = {
-				new Train(1,"YPR","Yasvantpur Jn","11:00","23:40"),
-				new Train(2,"GTL","Guntakal Jn","03:45","03:50"),
-				new Train(3,"YPR","Sekandrabad Jn","08:55","9:00"),
-				new Train(4,"YPR","Balharshah Jn","13:30","13:35"),
-				new Train(5,"YPR","HabibGanj Jn","21:20","23:40"),
-				new Train(6,"YPR","Jhansi Jn","01:15","23:40")
+				new Train(1,"YPR",   "Yasvantpur Jn"," ","23:40"),
+				new Train(2,"GTL", "Guntakal Jn","03:45","03:50"),
+				new Train(3,"SC",    "Sekandrabad Jn", "08:55","9:00"),
+				new Train(4,"BPQ",   "Balharshah Jn","13:30","13:35"),
+				new Train(5,"HBJ",    "HabibGanj Jn","21:20","21:25"),
+				new Train(6,"JSH",    "Jhansi Jn","01:15","21:25"),
+				new Train(6,"DEE",   "Delhi S Rohilla","07:00"," ")
 				};
+		System.out.println("-----------------------------------------------");
+		
 		for (Train transaction : transactions) {
 			transaction.printStatement();
 		}
